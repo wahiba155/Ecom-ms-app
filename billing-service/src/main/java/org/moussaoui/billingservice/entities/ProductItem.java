@@ -19,6 +19,7 @@ public class ProductItem {
     private int quantity;
     private double price;
     @ManyToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Bill bill;
     @Transient
     private Product product;
